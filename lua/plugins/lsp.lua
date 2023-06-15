@@ -81,6 +81,10 @@ return {
                 capabilities = lsp_capabilities,
             })
 
+            lspconfig.tsserver.setup({
+                capabilities = lsp_capabilities,
+            })
+
             lspconfig['null-ls'].setup({
                 capabilities = lsp_capabilities,
             })
