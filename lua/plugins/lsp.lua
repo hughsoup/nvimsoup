@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-        vim.keymap.set({'i', 'n'}, '<C-k>', vim.lsp.buf.signature_help, opts)
+        vim.keymap.set({ 'i', 'n' }, '<C-k>', vim.lsp.buf.signature_help, opts)
         vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
         vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
         vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
@@ -34,6 +34,18 @@ return {
         "williamboman/mason.nvim",
         build = ":MasonUpdate", -- :MasonUpdate updates registry contents
         config = true,
+    },
+    {
+        "jay-babu/mason-null-ls.nvim",
+        event = { "BufReadPre", "BufNewFile" },
+        dependencies = {
+            { "williamboman/mason.nvim" },
+            { "jose-elias-alvarez/null-ls.nvim" },
+        },
+        opts = {
+            ensure_installed = nil,
+            automatic_installation = true,
+        },
     },
     {
         "williamboman/mason-lspconfig.nvim",
@@ -68,6 +80,10 @@ return {
             lspconfig.pyright.setup({
                 capabilities = lsp_capabilities,
             })
+
+            lspconfig['null-ls'].setup({
+                capabilities = lsp_capabilities,
+            })
         end,
     },
     "neovim/nvim-lspconfig",
@@ -75,7 +91,6 @@ return {
         "hrsh7th/cmp-nvim-lsp",
         dependencies = {
             { "hrsh7th/nvim-cmp" },
-            { "neovim/nvim-lspconfig" },
         },
     },
     'L3MON4D3/LuaSnip',
