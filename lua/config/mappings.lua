@@ -31,3 +31,13 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>[]", "<cmd>vs<cr>")
 vim.keymap.set("n", "<leader>--", "<cmd>sp<cr>")
+
+vim.keymap.set("n", "<leader>t-", ":sp<cr><C-w><C-j>:terminal<cr>:set nonumber<cr>:set norelativenumber<cr>i")
+vim.keymap.set("n", "<leader>t]", ":vs<cr><C-w><C-l>:terminal<cr>:set nonumber<cr>:set norelativenumber<cr>i")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+vim.keymap.set("t", "<C-w>j", "<cmd>wincmd j<cr>")
+vim.keymap.set("t", "<C-w>k", "<cmd>wincmd k<cr>")
+vim.keymap.set("t", "<C-w>h", "<cmd>wincmd h<cr>")
+vim.keymap.set("t", "<C-w>l", "<cmd>wincmd l<cr>")
+vim.keymap.set("t", "<C-w>w", "<cmd>wincmd w<cr>")
+vim.keymap.set("t", "<C-w><C-w>", "<cmd>wincmd w<cr>")
