@@ -41,3 +41,5 @@ vim.keymap.set("t", "<C-w>h", "<cmd>wincmd h<cr>")
 vim.keymap.set("t", "<C-w>l", "<cmd>wincmd l<cr>")
 vim.keymap.set("t", "<C-w>w", "<cmd>wincmd w<cr>")
 vim.keymap.set("t", "<C-w><C-w>", "<cmd>wincmd w<cr>")
+
+vim.keymap.set("n", "<leader>ct", ":bn<bar>:bd #<cr>")
