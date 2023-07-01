@@ -5,5 +5,6 @@ return {
             { "<leader>u", "<cmd>UndotreeToggle<cr>" }
         }
     },
+    { "github/copilot.vim" },
     { "nvim-lua/plenary.nvim", lazy = true },
 }
