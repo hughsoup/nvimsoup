@@ -42,4 +42,10 @@ vim.keymap.set("t", "<C-w>l", "<cmd>wincmd l<cr>")
 vim.keymap.set("t", "<C-w>w", "<cmd>wincmd w<cr>")
 vim.keymap.set("t", "<C-w><C-w>", "<cmd>wincmd w<cr>")
 
+-- close current buffer (pnemonic: close tab)
 vim.keymap.set("n", "<leader>ct", ":bn<bar>:bd #<cr>")
+
+-- shortcut to wrap text in visual mode.
+vim.keymap.set("v", "<leader>wr", "gq")
+-- the same combo in normal mode will wrap the current line
+vim.keymap.set("n", "<leader>wr", "gqq")
