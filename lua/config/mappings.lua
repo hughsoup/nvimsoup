@@ -41,6 +41,11 @@ vim.keymap.set("t", "<C-w>h", "<cmd>wincmd h<cr>")
 vim.keymap.set("t", "<C-w>l", "<cmd>wincmd l<cr>")
 vim.keymap.set("t", "<C-w>w", "<cmd>wincmd w<cr>")
 vim.keymap.set("t", "<C-w><C-w>", "<cmd>wincmd w<cr>")
+-- Also bind C-w and arrow keys to switch between windows in terminal mode
+vim.keymap.set("t", "<C-w><Up>", "<cmd>wincmd k<cr>")
+vim.keymap.set("t", "<C-w><Down>", "<cmd>wincmd j<cr>")
+vim.keymap.set("t", "<C-w><Left>", "<cmd>wincmd h<cr>")
+vim.keymap.set("t", "<C-w><Right>", "<cmd>wincmd l<cr>")
 
 -- close current buffer (pnemonic: close tab)
 vim.keymap.set("n", "<leader>ct", ":bn<bar>:bd #<cr>")
