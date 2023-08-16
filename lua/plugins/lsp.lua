@@ -60,6 +60,8 @@ return {
                 'lua_ls',
                 'pyright',
                 'tsserver',
+                'terraformls',
+                'tflint',
             }
         },
         config = function(_, opts)

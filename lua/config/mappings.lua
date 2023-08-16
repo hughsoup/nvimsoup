@@ -54,3 +54,6 @@ vim.keymap.set("n", "<leader>ct", ":bn<bar>:bd #<cr>")
 vim.keymap.set("v", "<leader>wr", "gq")
 -- the same combo in normal mode will wrap the current line
 vim.keymap.set("n", "<leader>wr", "gqq")
+
+-- close the search pane that is displayed when showing references.
+vim.keymap.set("n", "<leader>gr", ":ccl<cr>")
